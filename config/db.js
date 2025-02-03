@@ -1,9 +1,13 @@
 const mongoose=require("mongoose")
 
-mongoose.connect("mongodb+srv://ankitkr1001a:5jCCB6M2TtEAJT79@cluster0.5z0g2.mongodb.net/")
+const connectDB = async()=>{
+    try {
+        await mongoose.connect(`${process.env.URL}`)
+        console.log(`MongoDB is connected`)
+    } catch (error) {
+        console.log(error.message)
+    }
+}
 
-const db=mongoose.connection
 
-module.exports=db
-
-
+module.exports = connectDB

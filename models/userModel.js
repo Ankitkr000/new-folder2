@@ -1,8 +1,8 @@
 const mongoose =require("mongoose")
 
-const userSchema=mongoose.Schema({
-    name:{type:String,min:1},
-    Username:{type:String,min:1},
+const userSchema= new mongoose.Schema({
+    name:{type:String},
+    Username:{type:String},
     Email:{type:String},
     Password:{
         type:String,
