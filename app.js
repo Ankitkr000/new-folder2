@@ -26,7 +26,7 @@ app.post("/signup", async (req,res)=>{
             }
 
             if(!name){
-                return res.status(400).send("Name field cannot be empty")
+                return res.status(400).send("Name field can be empty")
             }
             if(!Username){
                return res.status(400).send("Username field cannot be empty")
